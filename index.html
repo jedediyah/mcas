@@ -1,0 +1,671 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>NHS Mathematics</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+google.load('visualization', '1', {packages: ['corechart', 'line']});
+</script>
+
+</head>
+
+<body>
+
+<br>
+<div style="width:800px;">
+<p>
+This page contains MCAS data for Mathematics at Nantucket Public Schools.  The data was retrieved from the Mass DOE website <a href="http://profiles.doe.mass.edu/mcas/">http://profiles.doe.mass.edu/mcas/</a> using the automated scripts at <a href="https://github.com/jedediyah/mcas">https://github.com/jedediyah/mcas</a> and is meant to give a quick picture.  
+</p>
+<p>
+Note that some data points are unavailable during years that a class may not have participated in the MCAS assessment.  
+</p>
+<p>
+These are just snapshots, so use caution when interpreting data to avoid forming strong conclusions. 
+</p>
+<p>
+Please email williamsj@npsk.org if you find any errors or have questions about the graphs. 
+</p>
+</div>
+
+<div id="chart_div_overview2" style="width: 700px; height: 400px"></div>
+<script>
+        
+// RE-OVERVIEW        
+        var dataOverview2 = google.visualization.arrayToDataTable([    
+        /*['3',  -6,   1, -25, -17,  -4,  -7,  -12, -15, -32, -8 ],
+          ['4', -12, -15,  -9, -33, -14, -19, -11, -27, -26 , -25],
+          ['5',  -2,   6, -16,   10, -10,  -8,  -1,   -1, -6, -4  ],
+          ['6',  -9,  -9,   0,   -9,  -9, -21, -8,  -5, -6, -14  ],
+          ['7',   11,   0, -11,   6,  -4,  -7,  -1, -11, -4, -14  ],
+          ['8',   1,   9,  -4, -15,   6,  -6,  -6, -9, -11, -22 ],
+          ['10',  10,  16,   6,  12, -9,  -2,   7,   2, -9, -12  ]*/
+              ['3', -32, -17,  -6,  1 ],
+              ['4', -33, -26, -12, -9 ],
+              ['5', -16,  -8,   -1,  10 ],
+              ['6', -21,  -9,  -6,  0 ],
+              ['7', -14,  -11,   0,  11 ],
+              ['8', -12, -11,   1,  9 ],
+              ['10', -12, -9,   10, 16 ]
+      // Treat first row as data as well.
+    ], true);
+
+    var optionsOverview2 = {
+      legend:'none',
+          title: 'Nantucket Math MCAS, Proficient or Better 2006-2014 & 2017',
+      hAxis: {title: 'Grade',  titleTextStyle: {color: '#333'}},
+      vAxis: {title: 'Differential with State Average', minValue: 0}
+    };
+
+    var chart = new google.visualization.CandlestickChart(document.getElementById('chart_div_overview2'));
+
+    chart.draw(dataOverview2, optionsOverview2);
+</script>
+
+<div id="chart_div_data2021MAT" style="width: 700px; height: 400px"></div>
+<script type="text/javascript">
+var data2021MAT = new google.visualization.DataTable();
+data2021MAT.addColumn('number', 'Grade');
+data2021MAT.addColumn('number', 'Nantucket');
+data2021MAT.addColumn('number', 'State');
+data2021MAT.addRows([ 
+[3, 49, 61] ,
+[4, 25, 52] ,
+[5, 55, 60] ,
+]);
+var optionsdata2021MAT= {
+  title: 'Class of 2021, MCAS MAT',
+ pointSize: 3,
+    hAxis: {
+      title: 'Grade',
+    format: 'decimal',
+      minValue: 2,
+      maxValue: 10
+    },
+        vAxis: {
+          title: '% Proficient or Better',
+          minValue: 0,
+          maxValue: 100
+        },
+        backgroundColor: '#ffffff'
+      };
+ var chartdata2021MAT = new google.visualization.LineChart(document.getElementById('chart_div_data2021MAT'));
+ chartdata2021MAT.draw(data2021MAT, optionsdata2021MAT);
+</script>
+
+
+
+<div id="chart_div_data2020MAT" style="width: 700px; height: 400px"></div>
+<script type="text/javascript">
+var data2020MAT = new google.visualization.DataTable();
+data2020MAT.addColumn('number', 'Grade');
+data2020MAT.addColumn('number', 'Nantucket');
+data2020MAT.addColumn('number', 'State');
+data2020MAT.addRows([ 
+[3, 59, 66] ,
+[4, 40, 51] ,
+[5, 60, 61] ,
+[6, 54, 60] ,
+]);
+var optionsdata2020MAT= {
+  title: 'Class of 2020, MCAS MAT',
+ pointSize: 3,
+    hAxis: {
+      title: 'Grade',
+    format: 'decimal',
+      minValue: 2,
+      maxValue: 10
+    },
+        vAxis: {
+          title: '% Proficient or Better',
+          minValue: 0,
+          maxValue: 100
+        },
+        backgroundColor: '#ffffff'
+      };
+ var chartdata2020MAT = new google.visualization.LineChart(document.getElementById('chart_div_data2020MAT'));
+ chartdata2020MAT.draw(data2020MAT, optionsdata2020MAT);
+</script>
+
+
+
+
+
+<div id="chart_div_data2019MAT" style="width: 700px; height: 400px"></div>
+<script type="text/javascript">
+var data2019MAT = new google.visualization.DataTable();
+data2019MAT.addColumn('number', 'Grade');
+data2019MAT.addColumn('number', 'Nantucket');
+data2019MAT.addColumn('number', 'State');
+data2019MAT.addRows([ 
+[3, 61, 65] ,
+[4, 28, 47] ,
+[5, 56, 57] ,
+[6, 56, 60] ,
+[7, 46, 50] ,
+[10, 67, 79]
+]);
+var optionsdata2019MAT= {
+  title: 'Class of 2019, MCAS MAT',
+      pointSize: 3,
+    hAxis: {
+      title: 'Grade',
+    format: 'decimal',
+      minValue: 2,
+      maxValue: 10
+    },
+        vAxis: {
+          title: '% Proficient or Better',
+          minValue: 0,
+          maxValue: 100
+        },
+        backgroundColor: '#ffffff'
+      };
+ var chartdata2019MAT = new google.visualization.LineChart(document.getElementById('chart_div_data2019MAT'));
+ chartdata2019MAT.draw(data2019MAT, optionsdata2019MAT);
+</script>
+
+<div id="chart_div_data2018MAT" style="width: 700px; height: 400px"></div>
+<script type="text/javascript">
+var data2018MAT = new google.visualization.DataTable();
+data2018MAT.addColumn('number', 'Grade');
+data2018MAT.addColumn('number', 'Nantucket');
+data2018MAT.addColumn('number', 'State');
+data2018MAT.addRows([ 
+[3, 43, 60] ,
+[4, 34, 48] ,
+[5, 51, 59] ,
+[6, 52, 60] ,
+[7, 41, 52] ,
+[8, 42, 52] ,
+[10, 69, 78]
+]);
+var optionsdata2018MAT= {
+  title: 'Class of 2018, MCAS MAT',
+ pointSize: 3,
+    hAxis: {
+      title: 'Grade',
+    format: 'decimal',
+      minValue: 2,
+      maxValue: 10
+    },
+        vAxis: {
+          title: '% Proficient or Better',
+          minValue: 0,
+          maxValue: 100
+        },
+        backgroundColor: '#ffffff'
+      };
+ var chartdata2018MAT = new google.visualization.LineChart(document.getElementById('chart_div_data2018MAT'));
+ chartdata2018MAT.draw(data2018MAT, optionsdata2018MAT);
+</script>
+
+
+<div id="chart_div_data2017MAT" style="width: 700px; height: 400px"></div>
+<script type="text/javascript">
+var data2017MAT = new google.visualization.DataTable();
+data2017MAT.addColumn('number', 'Grade');
+data2017MAT.addColumn('number', 'Nantucket');
+data2017MAT.addColumn('number', 'State');
+data2017MAT.addRows([ 
+[3, 36, 61] ,
+[4, 15, 48] ,
+[5, 45, 55] ,
+[6, 37, 58] ,
+[7, 50, 51] ,
+[8, 45, 54] ,
+[10, 71, 78]
+]);
+var optionsdata2017MAT= {
+  title: 'Class of 2017, MCAS MAT',
+ pointSize: 3,
+    hAxis: {
+      title: 'Grade',
+    format: 'decimal',
+      minValue: 2,
+      maxValue: 10
+    },
+        vAxis: {
+          title: '% Proficient or Better',
+          minValue: 0,
+          maxValue: 100
+        },
+        backgroundColor: '#ffffff'
+      };
+ var chartdata2017MAT = new google.visualization.LineChart(document.getElementById('chart_div_data2017MAT'));
+ chartdata2017MAT.draw(data2017MAT, optionsdata2017MAT);
+</script>
+
+<div id="chart_div_data2016MAT" style="width: 700px; height: 400px"></div>
+<script type="text/javascript">
+var data2016MAT = new google.visualization.DataTable();
+data2016MAT.addColumn('number', 'Grade');
+data2016MAT.addColumn('number', 'Nantucket');
+data2016MAT.addColumn('number', 'State');
+data2016MAT.addRows([ 
+[3, 61, 60] ,
+[4, 40, 49] ,
+[5, 64, 54] ,
+[6, 52, 59] ,
+[7, 44, 51] ,
+[8, 46, 52] ,
+[10, 71, 78]
+]);
+var optionsdata2016MAT= {
+  title: 'Class of 2016, MCAS MAT',
+ pointSize: 3,
+    hAxis: {
+      title: 'Grade',
+    format: 'decimal',
+      minValue: 2,
+      maxValue: 10
+    },
+        vAxis: {
+          title: '% Proficient or Better',
+          minValue: 0,
+          maxValue: 100
+        },
+        backgroundColor: '#ffffff'
+      };
+ var chartdata2016MAT = new google.visualization.LineChart(document.getElementById('chart_div_data2016MAT'));
+ chartdata2016MAT.draw(data2016MAT, optionsdata2016MAT);
+</script>
+
+<div id="chart_div_data2015MAT" style="width: 700px; height: 400px"></div>
+<script type="text/javascript">
+var data2015MAT = new google.visualization.DataTable();
+data2015MAT.addColumn('number', 'Grade');
+data2015MAT.addColumn('number', 'Nantucket');
+data2015MAT.addColumn('number', 'State');
+data2015MAT.addRows([ 
+[3, 46, 52] ,
+[4, 33, 48] ,
+[5, 36, 52] ,
+[6, 48, 57] ,
+[7, 49, 53] ,
+[8, 46, 52] ,
+[10, 83, 80]
+]);
+var optionsdata2015MAT= {
+  title: 'Class of 2015, MCAS MAT',
+ pointSize: 3,
+    hAxis: {
+      title: 'Grade',
+    format: 'decimal',
+      minValue: 2,
+      maxValue: 10
+    },
+        vAxis: {
+          title: '% Proficient or Better',
+          minValue: 0,
+          maxValue: 100
+        },
+        backgroundColor: '#ffffff'
+      };
+ var chartdata2015MAT = new google.visualization.LineChart(document.getElementById('chart_div_data2015MAT'));
+ chartdata2015MAT.draw(data2015MAT, optionsdata2015MAT);
+</script>
+
+
+<div id="chart_div_data2014MAT" style="width: 700px; height: 400px"></div>
+<script type="text/javascript">
+var data2014MAT = new google.visualization.DataTable();
+data2014MAT.addColumn('number', 'Grade');
+data2014MAT.addColumn('number', 'Nantucket');
+data2014MAT.addColumn('number', 'State');
+data2014MAT.addRows([ 
+[4, 28, 40] ,
+[5, 57, 51] ,
+[6, 56, 56] ,
+[7, 55, 49] ,
+[8, 57, 51] ,
+[10, 85, 78]
+]);
+var optionsdata2014MAT= {
+  title: 'Class of 2014, MCAS MAT',
+ pointSize: 3,
+    hAxis: {
+      title: 'Grade',
+    format: 'decimal',
+      minValue: 2,
+      maxValue: 10
+    },
+        vAxis: {
+          title: '% Proficient or Better',
+          minValue: 0,
+          maxValue: 100
+        },
+        backgroundColor: '#ffffff'
+      };
+ var chartdata2014MAT = new google.visualization.LineChart(document.getElementById('chart_div_data2014MAT'));
+ chartdata2014MAT.draw(data2014MAT, optionsdata2014MAT);
+</script>
+
+
+<div id="chart_div_data2013MAT" style="width: 700px; height: 400px"></div>
+<script type="text/javascript">
+var data2013MAT = new google.visualization.DataTable();
+data2013MAT.addColumn('number', 'Grade');
+data2013MAT.addColumn('number', 'Nantucket');
+data2013MAT.addColumn('number', 'State');
+data2013MAT.addRows([ 
+[4, 22, 41] ,
+[5, 41, 43] ,
+[6, 43, 52] ,
+[7, 36, 47] ,
+[8, 32, 48] ,
+[10, 75, 77]
+]);
+var optionsdata2013MAT= {
+  title: 'Class of 2013, MCAS MAT',
+ pointSize: 3,
+    hAxis: {
+      title: 'Grade',
+    format: 'decimal',
+      minValue: 2,
+      maxValue: 10
+    },
+        vAxis: {
+          title: '% Proficient or Better',
+          minValue: 0,
+          maxValue: 100
+        },
+        backgroundColor: '#ffffff'
+      };
+ var chartdata2013MAT = new google.visualization.LineChart(document.getElementById('chart_div_data2013MAT'));
+ chartdata2013MAT.draw(data2013MAT, optionsdata2013MAT);
+</script>
+
+
+<div id="chart_div_data2012MAT" style="width: 700px; height: 400px"></div>
+<script type="text/javascript">
+var data2012MAT = new google.visualization.DataTable();
+data2012MAT.addColumn('number', 'Grade');
+data2012MAT.addColumn('number', 'Nantucket');
+data2012MAT.addColumn('number', 'State');
+data2012MAT.addRows([ 
+[4, 23, 42] ,
+[6, 37, 46] ,
+[7, 46, 46] ,
+[8, 44, 49] ,
+[10, 66, 75]
+]);
+var optionsdata2012MAT= {
+  title: 'Class of 2012, MCAS MAT',
+ pointSize: 3,
+    hAxis: {
+      title: 'Grade',
+    format: 'decimal',
+      minValue: 2,
+      maxValue: 10
+    },
+        vAxis: {
+          title: '% Proficient or Better',
+          minValue: 0,
+          maxValue: 100
+        },
+        backgroundColor: '#ffffff'
+      };
+ var chartdata2012MAT = new google.visualization.LineChart(document.getElementById('chart_div_data2012MAT'));
+ chartdata2012MAT.draw(data2012MAT, optionsdata2012MAT);
+</script>
+
+<div id="chart_div_data2011MAT" style="width: 700px; height: 400px"></div>
+<script type="text/javascript">
+var data2011MAT = new google.visualization.DataTable();
+data2011MAT.addColumn('number', 'Grade');
+data2011MAT.addColumn('number', 'Nantucket');
+data2011MAT.addColumn('number', 'State');
+data2011MAT.addRows([ 
+[4, 47, 40] ,
+[6, 55, 46] ,
+[7, 51, 40] ,
+[8, 54, 45] ,
+[10, 87, 75]
+]);
+var optionsdata2011MAT= {
+  title: 'Class of 2011, MCAS MAT',
+ pointSize: 3,
+    hAxis: {
+      title: 'Grade',
+    format: 'decimal',
+      minValue: 2,
+      maxValue: 10
+    },
+        vAxis: {
+          title: '% Proficient or Better',
+          minValue: 0,
+          maxValue: 100
+        },
+        backgroundColor: '#ffffff'
+      };
+ var chartdata2011MAT = new google.visualization.LineChart(document.getElementById('chart_div_data2011MAT'));
+ chartdata2011MAT.draw(data2011MAT, optionsdata2011MAT);
+</script>
+<div id="chart_div_data2010MAT" style="width: 700px; height: 400px"></div>
+<script type="text/javascript">
+var data2010MAT = new google.visualization.DataTable();
+data2010MAT.addColumn('number', 'Grade');
+data2010MAT.addColumn('number', 'Nantucket');
+data2010MAT.addColumn('number', 'State');
+data2010MAT.addRows([ 
+[4, 44, 39] ,
+[6, 21, 42] ,
+[8, 41, 40] ,
+[10, 78, 72]
+]);
+var optionsdata2010MAT= {
+  title: 'Class of 2010, MCAS MAT',
+ pointSize: 3,
+    hAxis: {
+      title: 'Grade',
+    format: 'decimal',
+      minValue: 2,
+      maxValue: 10
+    },
+        vAxis: {
+          title: '% Proficient or Better',
+          minValue: 0,
+          maxValue: 100
+        },
+        backgroundColor: '#ffffff'
+      };
+ var chartdata2010MAT = new google.visualization.LineChart(document.getElementById('chart_div_data2010MAT'));
+ chartdata2010MAT.draw(data2010MAT, optionsdata2010MAT);
+</script>
+
+<div id="chart_div_data2009MAT" style="width: 700px; height: 400px"></div>
+<script type="text/javascript">
+var data2009MAT = new google.visualization.DataTable();
+data2009MAT.addColumn('number', 'Grade');
+data2009MAT.addColumn('number', 'Nantucket');
+data2009MAT.addColumn('number', 'State');
+data2009MAT.addRows([ 
+[4, 32, 34] ,
+[6, 22, 42] ,
+[8, 45, 39] ,
+[10, 84, 69]
+]);
+var optionsdata2009MAT= {
+  title: 'Class of 2009, MCAS MAT',
+ pointSize: 3,
+    hAxis: {
+      title: 'Grade',
+    format: 'decimal',
+      minValue: 2,
+      maxValue: 10
+    },
+        vAxis: {
+          title: '% Proficient or Better',
+          minValue: 0,
+          maxValue: 100
+        },
+        backgroundColor: '#ffffff'
+      };
+ var chartdata2009MAT = new google.visualization.LineChart(document.getElementById('chart_div_data2009MAT'));
+ chartdata2009MAT.draw(data2009MAT, optionsdata2009MAT);
+</script>
+
+<div id="chart_div_data2008MAT" style="width: 700px; height: 400px"></div>
+<script type="text/javascript">
+var data2008MAT = new google.visualization.DataTable();
+data2008MAT.addColumn('number', 'Grade');
+data2008MAT.addColumn('number', 'Nantucket');
+data2008MAT.addColumn('number', 'State');
+data2008MAT.addRows([ 
+[4, 34, 40] ,
+[6, 42, 41] ,
+[8, 50, 39] ,
+[10, 77, 67]
+]);
+var optionsdata2008MAT= {
+  title: 'Class of 2008, MCAS MAT',
+ pointSize: 3,
+    hAxis: {
+      title: 'Grade',
+    format: 'decimal',
+      minValue: 2,
+      maxValue: 10
+    },
+        vAxis: {
+          title: '% Proficient or Better',
+          minValue: 0,
+          maxValue: 100
+        },
+        backgroundColor: '#ffffff'
+      };
+ var chartdata2008MAT = new google.visualization.LineChart(document.getElementById('chart_div_data2008MAT'));
+ chartdata2008MAT.draw(data2008MAT, optionsdata2008MAT);
+</script>
+
+<div id="chart_div_data2007MAT" style="width: 700px; height: 400px"></div>
+<script type="text/javascript">
+var data2007MAT = new google.visualization.DataTable();
+data2007MAT.addColumn('number', 'Grade');
+data2007MAT.addColumn('number', 'Nantucket');
+data2007MAT.addColumn('number', 'State');
+data2007MAT.addRows([ 
+[4, 15, 36] ,
+[6, 26, 36] ,
+[8, 32, 37] ,
+[10, 80, 62]
+]);
+var optionsdata2007MAT= {
+  title: 'Class of 2007, MCAS MAT',
+ pointSize: 3,
+    hAxis: {
+      title: 'Grade',
+    format: 'decimal',
+      minValue: 2,
+      maxValue: 10
+    },
+        vAxis: {
+          title: '% Proficient or Better',
+          minValue: 0,
+          maxValue: 100
+        },
+        backgroundColor: '#ffffff'
+      };
+ var chartdata2007MAT = new google.visualization.LineChart(document.getElementById('chart_div_data2007MAT'));
+ chartdata2007MAT.draw(data2007MAT, optionsdata2007MAT);
+</script>
+<div id="chart_div_data2006MAT" style="width: 700px; height: 400px"></div>
+<script type="text/javascript">
+var data2006MAT = new google.visualization.DataTable();
+data2006MAT.addColumn('number', 'Grade');
+data2006MAT.addColumn('number', 'Nantucket');
+data2006MAT.addColumn('number', 'State');
+data2006MAT.addRows([ 
+[4, 19, 34] ,
+[8, 20, 34] ,
+[10, 64, 57]
+]);
+var optionsdata2006MAT= {
+  title: 'Class of 2006, MCAS MAT',
+ pointSize: 3,
+    hAxis: {
+      title: 'Grade',
+    format: 'decimal',
+      minValue: 2,
+      maxValue: 10
+    },
+        vAxis: {
+          title: '% Proficient or Better',
+          minValue: 0,
+          maxValue: 100
+        },
+        backgroundColor: '#ffffff'
+      };
+ var chartdata2006MAT = new google.visualization.LineChart(document.getElementById('chart_div_data2006MAT'));
+ chartdata2006MAT.draw(data2006MAT, optionsdata2006MAT);
+</script>
+
+<div id="chart_div_data2005MAT" style="width: 700px; height: 400px"></div>
+<script type="text/javascript">
+var data2005MAT = new google.visualization.DataTable();
+data2005MAT.addColumn('number', 'Grade');
+data2005MAT.addColumn('number', 'Nantucket');
+data2005MAT.addColumn('number', 'State');
+data2005MAT.addRows([ 
+[8, 34, 34] ,
+[10, 72, 51]
+]);
+var optionsdata2005MAT= {
+  title: 'Class of 2005, MCAS MAT',
+ pointSize: 3,
+    hAxis: {
+      title: 'Grade',
+    format: 'decimal',
+      minValue: 2,
+      maxValue: 10
+    },
+        vAxis: {
+          title: '% Proficient or Better',
+          minValue: 0,
+          maxValue: 100
+        },
+        backgroundColor: '#ffffff'
+      };
+ var chartdata2005MAT = new google.visualization.LineChart(document.getElementById('chart_div_data2005MAT'));
+ chartdata2005MAT.draw(data2005MAT, optionsdata2005MAT);
+</script>
+
+<div id="chart_div_data2004MAT" style="width: 700px; height: 400px"></div>
+<script type="text/javascript">
+var data2004MAT = new google.visualization.DataTable();
+data2004MAT.addColumn('number', 'Grade');
+data2004MAT.addColumn('number', 'Nantucket');
+data2004MAT.addColumn('number', 'State');
+data2004MAT.addRows([ 
+[8, 45, 34] ,
+[10, 71, 44]
+]);
+var optionsdata2004MAT= {
+  title: 'Class of 2004, MCAS MAT',
+ pointSize: 3,
+    hAxis: {
+      title: 'Grade',
+    format: 'decimal',
+      minValue: 2,
+      maxValue: 10
+    },
+        vAxis: {
+          title: '% Proficient or Better',
+          minValue: 0,
+          maxValue: 100
+        },
+        backgroundColor: '#ffffff'
+      };
+ var chartdata2004MAT = new google.visualization.LineChart(document.getElementById('chart_div_data2004MAT'));
+ chartdata2004MAT.draw(data2004MAT, optionsdata2004MAT);
+</script>
+
+</body>
+
+</html>
+
+
